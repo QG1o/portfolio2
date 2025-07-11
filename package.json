@@ -26,13 +26,3 @@
     "vite": "^7.0.0"
   }
 }
-
-// GITHUB
-
-{
-  "homepage": "https://dein-github-username.github.io/mein-portfolio",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  }
-}
