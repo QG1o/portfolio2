@@ -24,7 +24,7 @@ function Hero() {
                 <img 
                     className={styles.heroImg} 
                     src={heroImg} 
-                    alt="Profile picture of Harris Johnsen" 
+                    alt="Profile picture" 
                     style={{ width: '300px', height: '300px', objectFit: 'cover', borderRadius: '50%' }}                />
                 <img 
                  className={styles.colorMode} 
