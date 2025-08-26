@@ -1,8 +1,8 @@
 import styles from './ProjectsStyles.module.css';
-import viberr from '../../assets/viberr.png';
-import freshBurger from '../../assets/fresh-burger.png';
-import hipsster from '../../assets/hipsster.png'
-import fitLift from '../../assets/fitlift.png'
+import project1 from '../../assets/project22.png';
+import project2 from '../../assets/project11.png';
+import project3 from '../../assets/project33.png'
+import project4 from '../../assets/project33.png'
 import ProjectCard from '../../common/ProjectCard';
 
 function Projects() {
@@ -11,29 +11,29 @@ function Projects() {
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
         <ProjectCard  
-          src={viberr} 
-          link="https://qg1o.github.io/portfolio2/"
-          h3="Project 1"
+          src={project3} 
+          link="https://qg1o.github.io/portfolio3/"
+          h3="Website 1"
           p="Project 1"
         />
         <ProjectCard  
-          src={freshBurger} 
+          src={project2} 
           link="https://qg1o.github.io/portfolio2/"
-          h3="Project 2"
+          h3="Website 2"
           p="Project 2"
         />
         <ProjectCard  
-          src={hipsster} 
-          link="https://qg1o.github.io/portfolio2/"
-          h3="Project 3"
+          src={project1} 
+          link="https://qg1o.github.io/portfolio1/"
+          h3="Website 3"
           p="Project 3"
         />
-        <ProjectCard  
-          src={fitLift} 
+        {/* <ProjectCard  
+          src={project4} 
           link="https://qg1o.github.io/portfolio2/"
-          h3="Project 4"
+          h3="Website 4"
           p="Project 4"
-        />
+        /> */}
       </div>
     </section>
     );
