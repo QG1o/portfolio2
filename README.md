@@ -1,83 +1,49 @@
-# Portfolio2 – React/Vite Portfolio
+## Georgios Tertlidis - Portfolio
 
-Eine einfache Portfolio-Website mit React und Vite.
+Ein modernes, schnelles Portfolio mit React und Vite – fokussiert auf klare UI/UX, Responsive Design und saubere Code-Struktur.
 
-## Voraussetzungen
+### 🚀 Features
 
-- Node.js LTS (empfohlen) und npm
+- 3 Sektionen: Projekte, Skills, Kontakt
+- Dark/Light Theme mit Context API
+- Responsive Design (Mobile-First)
+- Optimierte Bundles mit Vite
+- Saubere Komponentenstruktur und CSS Modules
 
-## Installation
+### 🛠️ Technologien
+
+- Frontend: React 19, Vite
+- Styling: CSS Modules
+- Assets: SVG/PNG, Google Fonts (Inter)
+
+### 📦 Installation
 
 ```bash
 npm install
-```
-
-## Entwicklung starten
-
-```bash
 npm run dev
 ```
 
-Der Dev-Server läuft anschließend lokal (Vite zeigt die URL im Terminal an).
-
-## Produktionsbuild erstellen
+### 🏗️ Build
 
 ```bash
 npm run build
 ```
 
-Das optimierte Build-Ergebnis liegt danach im Ordner `dist/`.
+### 🌐 Live Demo
 
-## Deployment auf GitHub Pages
+[Portfolio Website](https://qg1o.github.io/portfolio2/)
 
-Diese App ist mit Vite konfiguriert, unter dem Repository-Namen `portfolio2` zu laufen.
+### 📧 Kontakt
 
-- Prüfen Sie in `vite.config.js`, dass der `base`-Pfad korrekt ist:
-  ```js
-  export default defineConfig({
-    base: '/portfolio2/',
-    plugins: [react()],
-  })
-  ```
+- GitHub: QG1o
+- LinkedIn: Georgios Tertlidis
 
-### Variante A: Manuell über GitHub Pages (ohne zusätzliche Tools)
+### 📄 Lizenz
 
-1. Build erstellen: `npm run build`
-2. Den Inhalt von `dist/` auf einen Branch veröffentlichen, der für Pages genutzt wird (z. B. `gh-pages`).
-3. In GitHub → Repository → Settings → Pages den Branch (z. B. `gh-pages`) als Source auswählen.
+© 2024 Georgios Tertlidis. Alle Rechte vorbehalten.
 
-Tipp: Sie können das Veröffentlichen des `dist/`-Ordners z. B. mit einer Action automatisieren oder lokal per Git Subtree/Scripts erledigen.
+### Verwendete Ressourcen
 
-### Variante B: Mit gh-pages-Paket (optional)
-
-Falls Sie das npm-Paket `gh-pages` verwenden möchten, fügen Sie ein Deploy-Script hinzu und veröffentlichen Sie den Ordner `dist/`. Beispiel:
-
-```json
-{
-  "dev": "vite",
-  "build": "vite build",
-  "deploy": "gh-pages -d dist"
-}
-```
-
-Anschließend:
-
-```bash
-npm run build
-npm run deploy
-```
-
-## Hinweise zu Assets und Pfaden
-
-- Dateien im Ordner `public/` werden beim Build an die Wurzel des Deployments kopiert.
-- Beim Deployment unter `/portfolio2/` sollten Sie Asset-Links so referenzieren, dass sie mit dem eingestellten `base` funktionieren. Bewährt sind relative Pfade (z. B. `favicon.ico`) oder Pfade, die den `base` berücksichtigen (z. B. `/portfolio2/favicon.ico`).
-
-## Client-Side Routing (optional)
-
-Wenn Sie später Client-Side Routing (SPA) verwenden, benötigt GitHub Pages eine `404.html`, die auf `index.html` zurückleitet ("SPA GitHub Pages"-Ansatz), damit Deep-Links funktionieren.
-
-## Tech-Stack
-
-- React
-- Vite
-- CSS Modules
+- Zitate: Public Domain (antike Philosophie)
+- Icons: Custom erstellt (SVG)
+- Fonts: Google Fonts (Inter)
