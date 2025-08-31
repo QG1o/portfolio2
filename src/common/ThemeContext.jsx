@@ -5,13 +5,19 @@ const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({children}) => {
-    const [theme, setTheme] = useState(
-        () => localStorage.getItem('theme') || 'light'
-    );
+    const [theme, setTheme] = useState(() => {
+        // Sicherheitscheck für SSR/SSG
+        if (typeof window !== 'undefined') {
+            return localStorage.getItem('theme') || 'light';
+        }
+        return 'light';
+    });
     
     useEffect(() => {
-        document.body.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+        if (typeof window !== 'undefined') {
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
     }, [theme]);
 
     const toggleTheme = () => {
