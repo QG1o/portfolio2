@@ -1,49 +1,47 @@
-## Georgios Tertlidis - Portfolio
+# Portfolio - Georgios Tertlidis
 
-Ein modernes, schnelles Portfolio mit React und Vite – fokussiert auf klare UI/UX, Responsive Design und saubere Code-Struktur.
+IT-Administrator • Security Enthusiast
 
-### 🚀 Features
+## 🚀 Deployment auf GitHub Pages
 
-- 3 Sektionen: Projekte, Skills, Kontakt
-- Dark/Light Theme mit Context API
-- Responsive Design (Mobile-First)
-- Optimierte Bundles mit Vite
-- Saubere Komponentenstruktur und CSS Modules
+### Automatisches Deploy:
+```bash
+npm run deploy
+```
 
-### 🛠️ Technologien
+### Manuelles Deploy:
+1. Build erstellen:
+```bash
+npm run build
+```
 
-- Frontend: React 19, Vite
-- Styling: CSS Modules
-- Assets: SVG/PNG, Google Fonts (Inter)
+2. Mit GitHub Desktop:
+   - Änderungen committen
+   - Auf `gh-pages` Branch pushen (NICHT main!)
 
-### 📦 Installation
+### Wichtige Hinweise:
+- **Nur auf `gh-pages` Branch deployen!** 
+- Main Branch verursacht White Screen
+- GitHub Pages Settings: Source = `gh-pages` Branch
+- URL: `https://[username].github.io/portfolio2/`
+
+## 🛠️ Lokale Entwicklung
 
 ```bash
 npm install
 npm run dev
 ```
 
-### 🏗️ Build
+## 📁 Projektstruktur
 
-```bash
-npm run build
-```
+- `src/sections/` - Website Sektionen
+- `src/common/` - Gemeinsame Komponenten
+- `src/assets/` - Bilder und Icons
+- `public/` - Statische Dateien
 
-### 🌐 Live Demo
+## 🎨 Features
 
-[Portfolio Website](https://qg1o.github.io/portfolio2/)
-
-### 📧 Kontakt
-
-- GitHub: QG1o
-- LinkedIn: Georgios Tertlidis
-
-### 📄 Lizenz
-
-© 2024 Georgios Tertlidis. Alle Rechte vorbehalten.
-
-### Verwendete Ressourcen
-
-- Zitate: Public Domain (antike Philosophie)
-- Icons: Custom erstellt (SVG)
-- Fonts: Google Fonts (Inter)
+- 🌙 Dark/Light Mode Toggle
+- 🌈 Rainbow Hover Effects
+- 📱 Responsive Design
+- ⚡ Vite Build System

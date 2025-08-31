@@ -12,7 +12,7 @@ function Projects() {
       <div className={styles.projectsContainer}>
         <ProjectCard  
           src={project3} 
-          link="https://qg1o.github.io/portfolio3/"
+          link="https://qg1o.netlify.app/"
           h3="Website 1"
           p="Project 1"
         />
