@@ -29,7 +29,7 @@
                 left: -4px;
                 right: -4px;
                 bottom: -4px;
-                background: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff, #06ffa5, #ffbe0b, #fb5607, #ff006e);
+                background: linear-gradient(45deg, #f4a5c5, #b8a4ea, #a4c8f4, #a4f4d4, #f4e4a4, #f4c4a4, #f4a5c5);
                 background-size: 300% 300%;
                 border-radius: 50%;
                 z-index: -1;
@@ -45,7 +45,7 @@
                 left: -2px;
                 right: -2px;
                 bottom: -2px;
-                background: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff, #06ffa5, #ffbe0b, #fb5607, #ff006e);
+                background: linear-gradient(45deg, #f4a5c5, #b8a4ea, #a4c8f4, #a4f4d4, #f4e4a4, #f4c4a4, #f4a5c5);
                 background-size: 300% 300%;
                 border-radius: 50%;
                 z-index: -2;
@@ -82,23 +82,24 @@
         background-color: var(--btn-color);
         color: var(--btn-text-color);
         border: none;
-        border-radius: 20px;
+        border-radius: 25px;
         width: 126px;
         height: 50px;
         font-size: 20px;
         font-weight: bold;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+        box-shadow: 0 8px 20px rgba(155, 127, 212, 0.3), 0 3px 6px rgba(0, 0, 0, 0.1);
+        transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
         font-family: 'Manufacturing Consent', sans-serif;
     }
 
     button:hover {
-        transform: scale(1.05);
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 12px 28px rgba(155, 127, 212, 0.4), 0 6px 10px rgba(0, 0, 0, 0.15);
     }
-    
+
     button:active {
-        transform: translateY(2px);
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+        transform: translateY(0px) scale(0.98);
+        box-shadow: 0 4px 12px rgba(155, 127, 212, 0.25), 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -232,7 +233,7 @@
 .info {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 28px;
 }
 
 @media (width >=800px) {
