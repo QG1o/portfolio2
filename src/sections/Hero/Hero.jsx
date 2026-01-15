@@ -26,11 +26,12 @@ function Hero() {
                     src={heroImg} 
                     alt="Profile picture" 
                     style={{ width: '300px', height: '300px', objectFit: 'cover', borderRadius: '50%' }}                />
-                <img 
-                 className={styles.colorMode} 
-                 src={themeIcon} 
-                 alt="Color mode icon" 
+                <img
+                 className={styles.colorMode}
+                 src={themeIcon}
+                 alt="Color mode icon"
                  onClick={toggleTheme}
+                 data-theme-toggle
                 />
             </div>
             <div className={styles.info}>
