@@ -1,21 +1,40 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import styles from './CustomCursor.module.css';
 
 function CustomCursor() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isPointer, setIsPointer] = useState(false);
     const [trail, setTrail] = useState([]);
+    const rafId = useRef(null);
+    const lastTrailTime = useRef(0);
 
     useEffect(() => {
-        const handleMouseMove = (e) => {
-            setPosition({ x: e.clientX, y: e.clientY });
+        let animationId;
 
-            // Add trail effect
-            setTrail(prev => [...prev, {
-                x: e.clientX,
-                y: e.clientY,
-                id: Date.now()
-            }].slice(-15)); // Keep last 15 positions
+        const handleMouseMove = (e) => {
+            // Use requestAnimationFrame for smooth updates
+            if (rafId.current) {
+                cancelAnimationFrame(rafId.current);
+            }
+
+            rafId.current = requestAnimationFrame(() => {
+                setPosition({ x: e.clientX, y: e.clientY });
+
+                // Throttle trail creation (only every 50ms)
+                const now = Date.now();
+                if (now - lastTrailTime.current > 50) {
+                    lastTrailTime.current = now;
+                    setTrail(prev => {
+                        const newTrail = [...prev, {
+                            x: e.clientX,
+                            y: e.clientY,
+                            id: now
+                        }];
+                        // Keep only last 8 positions for better performance
+                        return newTrail.slice(-8);
+                    });
+                }
+            });
         };
 
         const handleMouseOver = (e) => {
@@ -35,15 +54,21 @@ function CustomCursor() {
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
             document.removeEventListener('mouseover', handleMouseOver);
+            if (rafId.current) {
+                cancelAnimationFrame(rafId.current);
+            }
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
         };
     }, []);
 
-    // Remove old trail points
+    // Clean up trail points automatically
     useEffect(() => {
         if (trail.length > 0) {
             const timer = setTimeout(() => {
                 setTrail(prev => prev.slice(1));
-            }, 50);
+            }, 100);
             return () => clearTimeout(timer);
         }
     }, [trail]);
