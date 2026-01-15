@@ -11,11 +11,12 @@
 
 .circle {
     position: absolute;
-    width: 0;
-    height: 0;
+    width: 100vmax;
+    height: 100vmax;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: expandCircle 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) scale(0);
+    animation: expandCircle 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: transform, opacity;
 }
 
 [data-theme="light"] .circle {
@@ -38,16 +39,14 @@
 
 @keyframes expandCircle {
     0% {
-        width: 0;
-        height: 0;
+        transform: translate(-50%, -50%) scale(0);
         opacity: 1;
     }
-    50% {
-        opacity: 1;
+    60% {
+        opacity: 0.9;
     }
     100% {
-        width: 300vmax;
-        height: 300vmax;
+        transform: translate(-50%, -50%) scale(3);
         opacity: 0;
     }
 }

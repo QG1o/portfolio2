@@ -1,6 +1,8 @@
 # Portfolio - QG1o
 
-IT-Administrator • Security Enthusiast
+Ein modernes, interaktives Portfolio mit beeindruckenden Animationen und Custom UI-Elementen.
+
+**IT-Administrator • Security Enthusiast**
 
 ## 🚀 Deployment auf GitHub Pages
 
@@ -41,7 +43,83 @@ npm run dev
 
 ## 🎨 Features
 
-- 🌙 Dark/Light Mode Toggle
-- 🌈 Rainbow Hover Effects
-- 📱 Responsive Design
-- ⚡ Vite Build System
+### Design & Visuals
+- 🌙 **Dark/Light Mode** mit animiertem Übergang
+- 🎨 **Sanfte Farbpalette** - Gedämpfte Pastellfarben für Augenfreundlichkeit
+- 🌈 **Rainbow Hover Effects** - Sanfte Pastell-Animationen statt greller Neons
+- 📐 **Gradient Backgrounds** - Dynamische Verläufe für mehr Tiefe
+- 💎 **Soft Shadows** - Mehrschichtige Schatten mit Farb-Glows
+- 📱 **Fully Responsive** - Optimiert für Mobile, Tablet und Desktop
+
+### Interactive Elements
+- 🖱️ **Custom Cursor System** (Desktop):
+  - Triple-Effect: Dot + Ring + Glow + Trail
+  - Smart Hover-Interaktion
+  - 60fps Performance mit requestAnimationFrame
+  - Theme-aware Farben
+  - Auto-disable auf Mobile/Touch
+
+- 🌀 **Loading Screen**:
+  - Animiertes Logo mit rotierenden Ringen
+  - Progress Bar mit Shimmer-Effekt
+  - Float & Pulse Animationen
+  - Smooth 2-Sekunden Fade-Out
+
+- 💫 **Enhanced Theme Transition**:
+  - Radiale Wellen-Animation
+  - Origin-basiert vom Toggle-Button
+  - GPU-accelerated für 60fps
+  - 1 Sekunde smooth cubic-bezier Easing
+
+### UI Components
+- ✨ **Enhanced Icons** - Theme-Toggle mit Drop-Shadow und Rotation
+- 🔘 **Animated Buttons** - Elevation-Changes mit farbigen Schatten
+- 📊 **Typography Hierarchy** - Klare Font-Weight-Abstufungen
+- 🎯 **Smooth Transitions** - Alle Elemente mit cubic-bezier Easing
+
+### Performance
+- ⚡ **60fps Animations** - GPU-Accelerated mit will-change
+- 🚀 **Optimized Rendering** - requestAnimationFrame für Cursor
+- 🧹 **Smart Cleanup** - Automatisches Trail-Management
+- 📦 **Vite Build System** - Lightning-fast HMR
+
+## 🛠️ Tech Stack
+
+- **React** - UI Framework
+- **Vite** - Build Tool & Dev Server
+- **CSS Modules** - Scoped Styling
+- **Modern CSS**:
+  - CSS Custom Properties (CSS Variables)
+  - Flexbox & Grid Layout
+  - CSS Animations & Transitions
+  - CSS Filters & Blend Modes
+  - GPU-Accelerated Transforms
+
+## 🎨 Farbpalette
+
+### Light Mode
+- **Background**: #d5e5f2 → #c8d9eb → #dcd5e8 (Sanftes Blau-Violett Gradient)
+- **Primary**: #9b7fd4 (Weiches Lila)
+- **Text**: #2d2d2d (Dunkles Grau)
+
+### Dark Mode
+- **Background**: #2d2b3e → #3d3b52 → #4a3d52 (Dunkles Grau-Violett Gradient)
+- **Primary**: #b8d4f7 (Helles Blau)
+- **Text**: #f0f0f0 (Helles Grau)
+
+### Accent Colors (Rainbow Effects)
+- Soft Pink: #f4a5c5
+- Lavender: #b8a4ea
+- Light Blue: #a4c8f4
+- Mint: #a4f4d4
+- Cream: #f4e4a4
+- Peach: #f4c4a4
+
+## 🌐 Browser Support
+
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile Browser (iOS Safari, Chrome Mobile)
+
+**Note**: Custom Cursor ist nur auf Desktop-Geräten mit Maus aktiviert

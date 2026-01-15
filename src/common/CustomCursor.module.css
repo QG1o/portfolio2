@@ -10,6 +10,7 @@
     transform: translate(-50%, -50%);
     transition: width 0.3s ease, height 0.3s ease, background 0.3s ease;
     mix-blend-mode: difference;
+    will-change: transform;
 }
 
 .cursorPointer {
@@ -32,6 +33,7 @@
                 height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                 border-color 0.3s ease;
     animation: ringPulse 2s ease-in-out infinite;
+    will-change: transform;
 }
 
 .cursorRingPointer {
@@ -54,6 +56,7 @@
     transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
     filter: blur(10px);
     animation: glowPulse 2s ease-in-out infinite;
+    will-change: transform;
 }
 
 .cursorGlowPointer {
@@ -74,7 +77,8 @@
     transform-origin: center;
     transform: translate(-50%, -50%);
     filter: blur(2px);
-    transition: opacity 0.15s ease;
+    transition: opacity 0.2s ease;
+    will-change: transform, opacity;
 }
 
 /* Animations */
