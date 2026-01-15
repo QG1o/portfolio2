@@ -26,6 +26,14 @@ body {
   font-family: 'Inter', sans-serif;
   transition: background 600ms cubic-bezier(0.4, 0, 0.2, 1);
   min-height: 100vh;
+  cursor: none;
+}
+
+/* Show default cursor on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
 }
 
 #root {
@@ -85,7 +93,18 @@ p {
 }
 
 .hover {
-  cursor: pointer;
+  cursor: none;
+}
+
+a, button, input, textarea, select {
+  cursor: none;
+}
+
+/* Show default cursor on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .hover, a, button, input, textarea, select {
+    cursor: auto;
+  }
 }
 
 @media (width >= 800px) {
