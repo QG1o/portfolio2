@@ -6,6 +6,7 @@
     text-align: center;
     height: 100dvh;
     min-height: 500px;
+    padding: 60px 20px 20px 20px;
 
     .hero {
         max-width: 200px;
@@ -105,6 +106,7 @@
 
 .colorModeContainer {
     position: relative;
+    margin-top: 10px;
 }
 
 .heroImg {
@@ -242,7 +244,8 @@
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-evenly;
-        
+        padding: 20px;
+
         .hero {
             max-width: 350px;
             width: 350px;
