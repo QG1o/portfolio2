@@ -142,6 +142,9 @@ npm run dev
 - Chrome/Edge (latest)
 - Firefox (latest)
 - Safari (latest)
+- Mobile Browser (iOS Safari, Chrome Mobile)
+
+**Note**: Custom Cursor ist nur auf Desktop-Geräten mit Maus aktiviert
 
 
 
@@ -157,7 +160,3 @@ npm run dev
 
 - GitHub: `QG1o`
 - LinkedIn: `QG1o`
-
-- Mobile Browser (iOS Safari, Chrome Mobile)
-
-**Note**: Custom Cursor ist nur auf Desktop-Geräten mit Maus aktiviert
