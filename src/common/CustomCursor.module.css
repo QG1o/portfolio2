@@ -67,18 +67,17 @@
 
 /* Trail effect */
 .trail {
-    width: 6px;
-    height: 6px;
-    background: linear-gradient(135deg, #b8a4ea, #a4c8f4);
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
     z-index: 9997;
     transform-origin: center;
-    transform: translate(-50%, -50%);
-    filter: blur(2px);
-    transition: opacity 0.2s ease;
+    filter: blur(3px);
+    transition: opacity 0.3s ease;
     will-change: transform, opacity;
+    box-shadow: 0 0 10px currentColor;
 }
 
 /* Animations */
@@ -121,9 +120,7 @@
     background: radial-gradient(circle, rgba(184, 212, 247, 0.35) 0%, transparent 70%);
 }
 
-[data-theme="dark"] .trail {
-    background: linear-gradient(135deg, #a4c8f4, #b8a4ea);
-}
+/* Rainbow trail colors are set inline via JavaScript */
 
 /* Hide on mobile/touch devices */
 @media (hover: none) and (pointer: coarse) {

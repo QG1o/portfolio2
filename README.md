@@ -52,11 +52,13 @@ npm run dev
 - 📱 **Fully Responsive** - Optimiert für Mobile, Tablet und Desktop
 
 ### Interactive Elements
-- 🖱️ **Custom Cursor System** (Desktop):
-  - Triple-Effect: Dot + Ring + Glow + Trail
-  - Smart Hover-Interaktion
+- 🌈 **Custom Cursor System** (Desktop):
+  - Triple-Effect: Dot + Ring + Glow + Rainbow Trail
+  - **Rainbow Trail**: Lebendiger Regenbogen-Schweif folgt dem Cursor
+  - 12 Trail-Punkte mit individuellen Regenbogenfarben
+  - Längere Sichtbarkeit (200ms) für besseren Effekt
+  - Smart Hover-Interaktion (Cursor vergrößert sich)
   - 60fps Performance mit requestAnimationFrame
-  - Theme-aware Farben
   - Auto-disable auf Mobile/Touch
 
 - 🌀 **Loading Screen**:
@@ -66,13 +68,17 @@ npm run dev
   - Smooth 2-Sekunden Fade-Out
 
 - 💫 **Enhanced Theme Transition**:
-  - Radiale Wellen-Animation
+  - **Spiral Wipe Animation**: Rotierender Farbwirbel-Effekt
+  - Conic-Gradient basiert für einzigartigen Look
   - Origin-basiert vom Toggle-Button
   - GPU-accelerated für 60fps
-  - 1 Sekunde smooth cubic-bezier Easing
+  - 800ms smooth cubic-bezier Easing mit 360° Rotation
 
 ### UI Components
-- ✨ **Enhanced Icons** - Theme-Toggle mit Drop-Shadow und Rotation
+- ✨ **Enhanced Icons**:
+  - Theme-Toggle (Sonne/Mond): 45px groß mit starkem Drop-Shadow
+  - 50% Scale + 25° Rotation beim Hover
+  - Brightness-Boost (1.4x) für bessere Sichtbarkeit
 - 🔘 **Animated Buttons** - Elevation-Changes mit farbigen Schatten
 - 📊 **Typography Hierarchy** - Klare Font-Weight-Abstufungen
 - 🎯 **Smooth Transitions** - Alle Elemente mit cubic-bezier Easing
@@ -98,16 +104,32 @@ npm run dev
 ## 🎨 Farbpalette
 
 ### Light Mode
-- **Background**: #d5e5f2 → #c8d9eb → #dcd5e8 (Sanftes Blau-Violett Gradient)
+- **Background Gradient** (4 Stops für sichtbaren Verlauf):
+  - Start: #b8d4f7 (Helles Blau)
+  - 30%: #d5e5f2 (Sehr helles Blau)
+  - 70%: #e8d5f2 (Rosa-Violett)
+  - Ende: #c8b8ea (Weiches Lila)
 - **Primary**: #9b7fd4 (Weiches Lila)
 - **Text**: #2d2d2d (Dunkles Grau)
 
 ### Dark Mode
-- **Background**: #2d2b3e → #3d3b52 → #4a3d52 (Dunkles Grau-Violett Gradient)
+- **Background Gradient** (4 Stops für sichtbaren Verlauf):
+  - Start: #1a1828 (Sehr dunkel)
+  - 30%: #2d2b3e (Dunkel Violett)
+  - 70%: #3d3b52 (Medium Violett)
+  - Ende: #524a5e (Heller Violett)
 - **Primary**: #b8d4f7 (Helles Blau)
 - **Text**: #f0f0f0 (Helles Grau)
 
-### Accent Colors (Rainbow Effects)
+### Rainbow Trail Colors (Cursor)
+- Pink: #ff006e
+- Orange: #fb5607
+- Yellow: #ffbe0b
+- Mint: #06ffa5
+- Blue: #3a86ff
+- Purple: #8338ec
+
+### Accent Colors (Hover Effects)
 - Soft Pink: #f4a5c5
 - Lavender: #b8a4ea
 - Light Blue: #a4c8f4

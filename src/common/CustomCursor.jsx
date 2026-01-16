@@ -20,9 +20,9 @@ function CustomCursor() {
             rafId.current = requestAnimationFrame(() => {
                 setPosition({ x: e.clientX, y: e.clientY });
 
-                // Throttle trail creation (only every 50ms)
+                // Throttle trail creation (only every 40ms for smoother rainbow)
                 const now = Date.now();
-                if (now - lastTrailTime.current > 50) {
+                if (now - lastTrailTime.current > 40) {
                     lastTrailTime.current = now;
                     setTrail(prev => {
                         const newTrail = [...prev, {
@@ -30,8 +30,8 @@ function CustomCursor() {
                             y: e.clientY,
                             id: now
                         }];
-                        // Keep only last 8 positions for better performance
-                        return newTrail.slice(-8);
+                        // Keep last 12 positions for fuller rainbow effect
+                        return newTrail.slice(-12);
                     });
                 }
             });
@@ -68,10 +68,21 @@ function CustomCursor() {
         if (trail.length > 0) {
             const timer = setTimeout(() => {
                 setTrail(prev => prev.slice(1));
-            }, 100);
+            }, 200); // Changed from 100ms to 200ms for longer visibility
             return () => clearTimeout(timer);
         }
     }, [trail]);
+
+    // Rainbow colors for trail
+    const rainbowColors = [
+        '#ff006e', // Pink
+        '#fb5607', // Orange
+        '#ffbe0b', // Yellow
+        '#06ffa5', // Mint
+        '#3a86ff', // Blue
+        '#8338ec', // Purple
+        '#ff006e', // Pink (loop)
+    ];
 
     return (
         <>
@@ -83,8 +94,9 @@ function CustomCursor() {
                     style={{
                         left: `${point.x}px`,
                         top: `${point.y}px`,
-                        opacity: (index / trail.length) * 0.5,
-                        transform: `scale(${0.3 + (index / trail.length) * 0.7})`
+                        opacity: (index / trail.length) * 0.8,
+                        transform: `translate(-50%, -50%) scale(${0.4 + (index / trail.length) * 0.6})`,
+                        background: rainbowColors[index % rainbowColors.length]
                     }}
                 />
             ))}

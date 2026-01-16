@@ -1,5 +1,5 @@
 :root {
-  --background-gradient: linear-gradient(135deg, #d5e5f2 0%, #c8d9eb 50%, #dcd5e8 100%);
+  --background-gradient: linear-gradient(135deg, #b8d4f7 0%, #d5e5f2 30%, #e8d5f2 70%, #c8b8ea 100%);
   --btn-color: #9b7fd4;
   --btn-text-color: #fff;
   --project-card-bg: #ffffff00;
@@ -9,7 +9,7 @@
 }
 
 [data-theme="dark"] {
-  --background-gradient: linear-gradient(135deg, #2d2b3e 0%, #3d3b52 50%, #4a3d52 100%);
+  --background-gradient: linear-gradient(135deg, #1a1828 0%, #2d2b3e 30%, #3d3b52 70%, #524a5e 100%);
   --btn-color: #b8d4f7;
   --btn-text-color: #2d2d2d;
   --project-card-bg: #fff;
