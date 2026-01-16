@@ -13,7 +13,7 @@ function ThemeTransition() {
 
         const timer = setTimeout(() => {
             setIsAnimating(false);
-        }, 1000);
+        }, 800);
 
         return () => clearTimeout(timer);
     }, [theme]);

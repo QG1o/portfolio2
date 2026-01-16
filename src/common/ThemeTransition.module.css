@@ -11,42 +11,41 @@
 
 .circle {
     position: absolute;
-    width: 100vmax;
-    height: 100vmax;
+    width: 200vmax;
+    height: 200vmax;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        var(--transition-color) 15deg,
+        var(--transition-color) 345deg,
+        transparent 360deg
+    );
     border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    animation: expandCircle 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: spiralWipe 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
     will-change: transform, opacity;
+    opacity: 0;
 }
 
 [data-theme="light"] .circle {
-    background: radial-gradient(circle,
-        rgba(200, 224, 250, 0.95) 0%,
-        rgba(184, 212, 247, 0.9) 30%,
-        rgba(212, 200, 247, 0.85) 60%,
-        rgba(212, 200, 247, 0) 100%
-    );
+    --transition-color: #d5e5f2;
 }
 
 [data-theme="dark"] .circle {
-    background: radial-gradient(circle,
-        rgba(45, 43, 62, 0.95) 0%,
-        rgba(61, 59, 82, 0.9) 30%,
-        rgba(74, 61, 82, 0.85) 60%,
-        rgba(74, 61, 82, 0) 100%
-    );
+    --transition-color: #3d3b52;
 }
 
-@keyframes expandCircle {
+@keyframes spiralWipe {
     0% {
-        transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) rotate(0deg) scale(0);
         opacity: 1;
     }
-    60% {
-        opacity: 0.9;
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(180deg) scale(2);
     }
     100% {
-        transform: translate(-50%, -50%) scale(3);
+        transform: translate(-50%, -50%) rotate(360deg) scale(3);
         opacity: 0;
     }
 }
