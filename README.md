@@ -142,6 +142,22 @@ npm run dev
 - Chrome/Edge (latest)
 - Firefox (latest)
 - Safari (latest)
+
+
+
+## 📄 Lizenz
+
+© 2026 QG1o. Alle Rechte vorbehalten.
+
+## 🌐 Live Demo
+
+[Portfolio Website](https://qg1o.github.io/portfolio1/)
+
+## 📧 Kontakt
+
+- GitHub: `QG1o`
+- LinkedIn: `QG1o`
+
 - Mobile Browser (iOS Safari, Chrome Mobile)
 
 **Note**: Custom Cursor ist nur auf Desktop-Geräten mit Maus aktiviert
