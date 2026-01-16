@@ -154,7 +154,7 @@ npm run dev
 
 ## 🌐 Live Demo
 
-[Portfolio Website](https://qg1o.github.io/portfolio1/)
+[Portfolio Website](https://qg1o.github.io/portfolio2/)
 
 ## 📧 Kontakt
 
