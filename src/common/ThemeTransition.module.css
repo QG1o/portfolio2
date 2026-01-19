@@ -1,0 +1,51 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10001;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 200vmax;
+    height: 200vmax;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        var(--transition-color) 15deg,
+        var(--transition-color) 345deg,
+        transparent 360deg
+    );
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: spiralWipe 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    will-change: transform, opacity;
+    opacity: 0;
+}
+
+[data-theme="light"] .circle {
+    --transition-color: #d5e5f2;
+}
+
+[data-theme="dark"] .circle {
+    --transition-color: #3d3b52;
+}
+
+@keyframes spiralWipe {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(180deg) scale(2);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(3);
+        opacity: 0;
+    }
+}
