@@ -14,6 +14,7 @@ function Contact() {
             name="name"
             id="name"
             placeholder="Name"
+            autoComplete="name"
             required
           />
         </div>
@@ -22,10 +23,11 @@ function Contact() {
             Email
           </label>
           <input
-            type="text"
-            mail="email"
+            type="email"
+            name="email"
             id="email"
             placeholder="Email"
+            autoComplete="email"
             required
           />
         </div>

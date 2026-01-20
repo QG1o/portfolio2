@@ -42,14 +42,14 @@ function Hero() {
                 </h1>
                 <h2>IT-Administrator • Security Enthusiast</h2>
                 <span>
-                    <a href="https://x.com/QG1o_" target="_blank">
-                        <img src={twitterIcon} alt="Twitter icon" />
+                    <a href="https://x.com/QG1o_" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) Profil von QG1o">
+                        <img src={twitterIcon} alt="X (Twitter)" />
                     </a>
-                    <a href="https://github.com/QG1o" target="_blank">
-                        <img src={githubIcon} alt="Github icon" />
+                    <a href="https://github.com/QG1o" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profil von QG1o">
+                        <img src={githubIcon} alt="GitHub" />
                     </a>
-                    <a href="https://www.linkedin.com/in/qg1o/" target="_blank">
-                        <img src={linkedinIcon} alt="Linkedin icon" />
+                    <a href="https://www.linkedin.com/in/qg1o/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profil von QG1o">
+                        <img src={linkedinIcon} alt="LinkedIn" />
                     </a>
                 </span>
                 <p className={styles.description}>
